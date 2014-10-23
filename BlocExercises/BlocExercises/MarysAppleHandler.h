@@ -15,6 +15,8 @@
 /**
  Indicates which item Mary can purchase, given an amount of dollars.
  
+ Mary loves to handle those apples.
+ 
  See `MarysAppleHandlerTests` for all expected results.
  
  Example usage:
