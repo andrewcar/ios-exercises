@@ -22,12 +22,23 @@
     /* WORK HERE */
     NSArray *array = [[NSArray alloc] init];
     NSMutableArray *mutableArray = [array mutableCopy];
-    while (number < otherNumber) {
-        [mutableArray addObject:[NSNumber numberWithInteger:number]];
-        number++;
+    if (number < otherNumber) {
+        while (number < otherNumber) {
+            [mutableArray addObject:[NSNumber numberWithInteger:number]];
+            number++;
+        }
+        [mutableArray addObject:[NSNumber numberWithInteger:otherNumber]];
+        array = mutableArray;
+    } else if (number > otherNumber) {
+        while (number > otherNumber) {
+            [mutableArray addObject:[NSNumber numberWithInteger:number]];
+            number--;
+        }
+        [mutableArray addObject:[NSNumber numberWithInteger:otherNumber]];
+        array = mutableArray;
+    } else if (number == otherNumber) {
+        array = @[@(number)];
     }
-    [mutableArray addObject:[NSNumber numberWithInteger:number]];
-    array = mutableArray;
     return array;
 }
 
