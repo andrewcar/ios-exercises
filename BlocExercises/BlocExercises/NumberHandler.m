@@ -20,7 +20,7 @@
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
-    NSArray *array = [[NSArray alloc] init];
+    NSArray *array = [NSArray new];
     NSMutableArray *mutableArray = [array mutableCopy];
     if (number < otherNumber) {
         while (number < otherNumber) {
